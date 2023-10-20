@@ -1,0 +1,3 @@
+$(eval $(call addlib,appuwebsockets))
+
+APPUWEBSOCKETS_SRCS-y += $(APPUWEBSOCKETS_BASE)/main.cpp

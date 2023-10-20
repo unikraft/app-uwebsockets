@@ -1,0 +1,51 @@
+specification: v0.5
+name: test
+unikraft:
+  source: https://github.com/andreittr/unikraft.git
+  version: ttr/wip-vfs-ng
+  kconfig:
+    - CONFIG_LIBPOSIX_SYSINFO=y
+    - CONFIG_LIBUKSIGNAL=y
+
+targets:
+  - platform: qemu
+    architecture: x86_64
+    kconfig:
+      - CONFIG_PLAT_KVM=y
+      - CONFIG_LIBCXXABI=y
+      - CONFIG_LIBCXX=y
+      - CONFIG_LIBUNWIND=y
+      - CONFIG_LIBCOMPILER_RT=y
+      - CONFIG_LIBMUSL=y
+      - CONFIG_LIBLWIP=y
+      - CONFIG_LWIP_UKNETDEV=y
+      - CONFIG_LWIP_DHCP=y
+      - CONFIG_LIBOPENSSL=y
+      - CONFIG_LIBSSL=y
+      - CONFIG_LIBZLIB=y
+      - CONFIG_LIBUSOCKETS=y
+      - CONFIG_LIBUWEBSOCKETS=y
+
+libraries:
+  libcxxabi:
+    version: stable
+  libcxx:
+    version: stable
+  libunwind:
+    version: stable
+  compiler-rt:
+    version: stable
+  musl:
+    version: stable
+  lwip:
+    version: stable
+  openssl:
+    version: stable
+  zlib:
+    version: stable
+  usockets:
+    source: https://github.com/jviotti/lib-usockets.git
+    version: main
+  uwebsockets:
+    source: https://github.com/jviotti/lib-uwebsockets.git
+    version: main
