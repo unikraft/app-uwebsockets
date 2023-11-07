@@ -44,8 +44,6 @@ libraries:
   zlib:
     version: stable
   usockets:
-    source: https://github.com/jviotti/lib-usockets.git
-    version: main
+    version: stable
   uwebsockets:
-    source: https://github.com/jviotti/lib-uwebsockets.git
-    version: main
+    version: stable
